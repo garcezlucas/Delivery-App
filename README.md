@@ -10,10 +10,9 @@ Este é um projeto de um **aplicativo de delivery** completo, incluindo backend 
 
 ### Backend
 - **Node.js**: Plataforma de execução para o backend.
-- **Express**: Framework para construção de APIs REST.
+- **Nest.Js**: Framework para construção de APIs REST.
 - **MongoDB**: Banco de dados NoSQL.
 - **JWT**: Gerenciamento de autenticação.
-- **Socket.IO**: Atualizações em tempo real para pedidos (opcional).
 
 ### Aplicativo para Clientes
 - **React Native**: Framework para criação do aplicativo mobile.
