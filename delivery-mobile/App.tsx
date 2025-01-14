@@ -1,21 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
-import Button from "./src/components/button/Button";
+import Login from "./src/screens/login/Login";
+import Register from "./src/screens/register/Register";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World! Teste</Text>
-
-      <Button title="Acessar" />
-    </View>
+   /*  <Login /> */
+    <Register />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
