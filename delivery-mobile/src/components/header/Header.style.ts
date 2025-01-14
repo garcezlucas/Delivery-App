@@ -2,15 +2,17 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT_SIZE } from "../../constants/Theme";
 
 export const styles = StyleSheet.create({
-  btn: {
+  header: {
     width: "100%",
-    backgroundColor: COLORS.red,
-    borderRadius: 6
+    alignItems: "center",
   },
-  text: {
-    fontSize: FONT_SIZE.lg,
-    color: COLORS.white,
-    padding: 14,
+  logo: {
+    width: 170,
+    height: 50,
+  },
+  title: {
+    color: COLORS.dark_gray,
+    fontSize: FONT_SIZE.md,
     textAlign: "center",
   },
 });
