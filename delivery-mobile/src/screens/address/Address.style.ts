@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS, FONT_SIZE } from "../../constants/Theme";
+import { COLORS } from "../../constants/Theme";
 
 export const styles = StyleSheet.create({
   container: {
@@ -11,27 +11,28 @@ export const styles = StyleSheet.create({
   },
   formGroup: {
     width: "100%",
-    marginTop: 50,
+    marginTop: 40,
     marginBottom: 40,
+  },
+  formRow: {
+    flexDirection: "row",
+  },
+  form70: {
+    width: "70%",
+    marginBottom: 20,
+    paddingRight: 10
+  },
+  form30: {
+    width: "30%",
+    marginBottom: 20,
   },
   form: {
     width: "100%",
-    marginBottom: 25,
+    marginBottom: 20,
   },
   formButton: {
     width: "100%",
     marginBottom: 25,
-    marginTop: 30,
-  },
-  footer: {
-    width: "100%",
-    position: "absolute",
-    bottom: 0,
-    marginBottom: 50,
-  },
-  footerText: {
-    textAlign: "center",
-    color: COLORS.dark_gray,
-    fontSize: FONT_SIZE.md,
+    marginTop: 20,
   },
 });

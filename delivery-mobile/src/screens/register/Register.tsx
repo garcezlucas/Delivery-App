@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { View } from "react-native";
 import { styles } from "./Register.style";
 import Header from "../../components/header/Header";
 import TextBox from "../../components/textBox/TextBox";
@@ -29,12 +29,6 @@ const Register = () => {
         <View style={styles.formButton}>
           <Button title="Próximo passo" />
         </View>
-      </View>
-
-      <View style={styles.footer}>
-        <TouchableOpacity>
-          <Text style={styles.footerText}>Acessar minha conta</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );

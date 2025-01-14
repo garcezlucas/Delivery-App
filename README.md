@@ -2,7 +2,7 @@
 
 ### **Em construção**
 
-Este é um projeto de um **aplicativo de delivery** completo, incluindo backend e aplicativo para clientes. O objetivo é criar uma solução moderna e escalável utilizando tecnologias como **Node.js** e **React Native**.
+Este é um projeto de um **aplicativo de delivery** completo, incluindo backend e aplicativo para clientes. O objetivo é criar uma solução moderna e escalável utilizando **Node.js** e **React Native**.
 
 ---
 
@@ -17,7 +17,7 @@ Este é um projeto de um **aplicativo de delivery** completo, incluindo backend 
 ### Aplicativo para Clientes
 - **React Native**: Framework para criação do aplicativo mobile.
 - **Expo**: Ferramenta para desenvolvimento e prototipagem.
-- **Redux** ou **Context API**: Gerenciamento de estado global.
+- **Context API**: Gerenciamento de estado global.
 
 ---
 
