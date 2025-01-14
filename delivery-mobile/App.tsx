@@ -1,11 +1,7 @@
-import Address from "./src/screens/address/Address";
-import Login from "./src/screens/login/Login";
-import Register from "./src/screens/register/Register";
+import { Routes } from "./src/Routes";
 
 export default function App() {
   return (
-   /*  <Login /> */
-   /*  <Register /> */
-    <Address />
+    <Routes/>
   );
 }
