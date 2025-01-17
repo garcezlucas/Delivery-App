@@ -2,7 +2,7 @@ import { Text, TextInput, View } from "react-native";
 import { styles } from "./TextBox.style";
 
 interface TextBoxProps {
-  label: string;
+  label?: string;
   value: string;
   placeholder?: string;
   isPassword?: boolean;
@@ -18,7 +18,8 @@ const TextBox: React.FC<TextBoxProps> = ({
 }) => {
   return (
     <View>
-      <Text style={styles.label}>{label}</Text>
+      {label && <Text style={styles.label}>{label}</Text>}
+
       <TextInput
         style={styles.input}
         value={value}
