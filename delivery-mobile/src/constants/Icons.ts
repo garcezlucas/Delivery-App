@@ -3,5 +3,6 @@ import remove from "../assets/delete.png";
 import logo from "../assets/logo.png";
 import cart from "../assets/cart.png";
 import favoriteFull from "../assets/favorito-full2.png";
+import empty from "../assets/empty.png";
 
-export default {back, remove, logo, cart, favoriteFull}
+export default {back, remove, logo, cart, favoriteFull, empty}

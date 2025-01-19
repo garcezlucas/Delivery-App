@@ -30,14 +30,16 @@ const Home = () => {
         />
       </View>
 
-      <ScrollView showsVerticalScrollIndicator={false} >
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories categories={categorias} />
 
         <Banners banners={banners} />
 
         <Text style={styles.highlights}>Destaques</Text>
         {restaurantes?.map((restaurant) => {
-          return <Restaurant restaurant={restaurant} />;
+          return (
+            <Restaurant restaurant={restaurant} icon={Icons.favoriteFull} />
+          );
         })}
       </ScrollView>
     </SafeAreaView>
