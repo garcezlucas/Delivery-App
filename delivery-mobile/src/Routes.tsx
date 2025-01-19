@@ -4,10 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./screens/login/Login";
 import RegisterAddress from "./screens/registerAddress/RegisterAddress";
 import Register from "./screens/register/Register";
-import Home from "./screens/home/Home";
-import Favorites from "./screens/favorites/Favorites";
-import Orders from "./screens/orders/Orders";
-import Profile from "./screens/profile/Profile";
+import Search from "./screens/search/Search";
+import Icons from "./constants/Icons";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,38 +19,15 @@ export function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen
-          name="profile"
-          component={Profile}
-          options={{
-            title: "Meu perfil",
-            headerTitleAlign: "center",
-            headerShadowVisible: false,
-          }}
-        />
-      <Stack.Screen
-          name="orders"
-          component={Orders}
-          options={{
-            title: "Meus pedidos",
-            headerTitleAlign: "center",
-            headerShadowVisible: false,
-          }}
-        />
         <Stack.Screen
-          name="favorites"
-          component={Favorites}
+          name="search"
+          component={Search}
           options={{
-            title: "Favoritos",
-            headerTitleAlign: "center",
             headerShadowVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="home"
-          component={Home}
-          options={{
-            headerShown: false,
+            title: "Resultados da busca",
+            headerTitleAlign: "center",
+            headerBackTitle: "Voltar",
+            headerBackImageSource: Icons.back
           }}
         />
         <Stack.Screen
