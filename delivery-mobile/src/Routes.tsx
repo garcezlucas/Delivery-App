@@ -2,11 +2,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./screens/login/Login";
-import Address from "./screens/address/Address";
+import RegisterAddress from "./screens/registerAddress/RegisterAddress";
 import Register from "./screens/register/Register";
 import Home from "./screens/home/Home";
 import Favorites from "./screens/favorites/Favorites";
 import Orders from "./screens/orders/Orders";
+import Profile from "./screens/profile/Profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,15 @@ export function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+          name="profile"
+          component={Profile}
+          options={{
+            title: "Meu perfil",
+            headerTitleAlign: "center",
+            headerShadowVisible: false,
+          }}
+        />
       <Stack.Screen
           name="orders"
           component={Orders}
@@ -60,8 +70,8 @@ export function Routes() {
           }}
         />
         <Stack.Screen
-          name="address"
-          component={Address}
+          name="registerAddress"
+          component={RegisterAddress}
           options={{
             headerShadowVisible: false,
             title: "",

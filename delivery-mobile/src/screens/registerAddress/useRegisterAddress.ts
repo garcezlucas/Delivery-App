@@ -1,6 +1,6 @@
-import { AddressNavigationProp } from "./Address";
+import { AddressNavigationProp } from "./RegisterAddress";
 
-interface useAddressProps {
+interface useRegisterAddressProps {
   navigation: AddressNavigationProp;
   address: string;
   setAddress: React.Dispatch<React.SetStateAction<string>>;
@@ -16,7 +16,7 @@ interface useAddressProps {
   setCep: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export function useAddress({
+export function useRegisterAddress({
   navigation,
   address,
   setAddress,
@@ -30,7 +30,7 @@ export function useAddress({
   setState,
   cep,
   setCep,
-}: useAddressProps) {
+}: useRegisterAddressProps) {
   const handleAddressChange = (text: string) => setAddress(text);
   const handleComplementChange = (text: string) => setComplement(text);
   const handleNeighborhoodChange = (text: string) => setNeighborhood(text);

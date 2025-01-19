@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View } from "react-native";
-import { styles } from "./Address.style";
+import { styles } from "./RegisterAddress.style";
 import Header from "../../components/header/Header";
 import TextBox from "../../components/textBox/TextBox";
 import Button from "../../components/button/Button";
-import { useAddress } from "./useAddress";
+import { useRegisterAddress } from "./useRegisterAddress";
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { RootStackParamList } from "../../Routes";
 
@@ -13,7 +13,7 @@ export type AddressNavigationProp = NavigationProp<
   "address"
 >;
 
-const Address = () => {
+const RegisterAddress = () => {
   const navigation = useNavigation<AddressNavigationProp>();
 
   const [address, setAddress] = useState<string>("");
@@ -31,7 +31,7 @@ const Address = () => {
     handleStateChange,
     handleCepChange,
     handleCreateAccount,
-  } = useAddress({
+  } = useRegisterAddress({
     navigation,
     address,
     setAddress,
@@ -108,4 +108,4 @@ const Address = () => {
   );
 };
 
-export default Address;
+export default RegisterAddress;

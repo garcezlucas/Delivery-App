@@ -2,11 +2,11 @@ import { Image, View, Text, TouchableOpacity, ImageSourcePropType } from "react-
 import { Restaurant } from "../../interfaces/Restaurant";
 import { styles } from "./Restaurant.style";
 
-interface RestaurantProps {
+interface RestaurantComponentProps {
   restaurant: Restaurant;
   icon: ImageSourcePropType;
 }
-const RestaurantComponent: React.FC<RestaurantProps> = ({ restaurant, icon }) => {
+const RestaurantComponent: React.FC<RestaurantComponentProps> = ({ restaurant, icon }) => {
   return (
     <View style={styles.container}>
       <Image source={restaurant.logotipo} style={styles.logo} />
