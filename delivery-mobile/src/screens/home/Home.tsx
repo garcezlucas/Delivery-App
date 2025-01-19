@@ -8,7 +8,7 @@ import Categories from "../../components/categories/Categories";
 import { banners, categorias } from "../../constants/mock";
 import Banners from "../../components/banners/Banners";
 import { restaurantes } from "../../constants/mock";
-import Restaurant from "../../components/restaurant/Restaurant";
+import RestaurantComponent from "../../components/restaurant/Restaurant";
 
 const Home = () => {
   const [searchText, setSearchText] = useState<string>("");
@@ -38,7 +38,7 @@ const Home = () => {
         <Text style={styles.highlights}>Destaques</Text>
         {restaurantes?.map((restaurant) => {
           return (
-            <Restaurant restaurant={restaurant} icon={Icons.favoriteFull} />
+            <RestaurantComponent restaurant={restaurant} icon={Icons.favoriteFull} />
           );
         })}
       </ScrollView>

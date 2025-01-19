@@ -1,12 +1,12 @@
 import { Image, View, Text, TouchableOpacity, ImageSourcePropType } from "react-native";
-import { RestaurantType } from "../../interfaces/Restaurant";
+import { Restaurant } from "../../interfaces/Restaurant";
 import { styles } from "./Restaurant.style";
 
 interface RestaurantProps {
-  restaurant: RestaurantType;
+  restaurant: Restaurant;
   icon: ImageSourcePropType;
 }
-const Restaurant: React.FC<RestaurantProps> = ({ restaurant, icon }) => {
+const RestaurantComponent: React.FC<RestaurantProps> = ({ restaurant, icon }) => {
   return (
     <View style={styles.container}>
       <Image source={restaurant.logotipo} style={styles.logo} />
@@ -21,4 +21,4 @@ const Restaurant: React.FC<RestaurantProps> = ({ restaurant, icon }) => {
   );
 };
 
-export default Restaurant;
+export default RestaurantComponent;

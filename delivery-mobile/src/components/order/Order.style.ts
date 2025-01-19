@@ -4,32 +4,37 @@ import { COLORS, FONT_SIZE } from "../../constants/Theme";
 export const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
     marginBottom: 10,
     marginTop: 10,
-    
   },
   logo: {
     width: 80,
     height: 80,
-    borderRadius: 6
+    borderRadius: 6,
   },
   texts: {
     flex: 1,
     padding: 8,
+    justifyContent: "space-between",
   },
   name: {
-    fontSize: FONT_SIZE.md,
     color: COLORS.dark_gray,
-    marginBottom: 10
+    fontSize: FONT_SIZE.md,
   },
-  address: {
+  containerAmount: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  amount: {
+    color: COLORS.medium_gray,
     fontSize: FONT_SIZE.sm,
-    color: COLORS.medium_gray
   },
-  fav: {
-    width: 30,
-    height: 30,
-  }
+  date: {
+    color: COLORS.medium_gray,
+    fontSize: FONT_SIZE.sm,
+  },
+  status: {
+    color: COLORS.green,
+    fontSize: FONT_SIZE.md,
+  },
 });
