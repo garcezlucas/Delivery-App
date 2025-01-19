@@ -1,12 +1,12 @@
-import { Image, View, Text, TouchableOpacity } from "react-native";
+import { Image, View, Text, TouchableOpacity, ImageSourcePropType } from "react-native";
 import { RestaurantType } from "../../interfaces/Restaurant";
-import Icons from "../../constants/Icons";
 import { styles } from "./Restaurant.style";
 
 interface RestaurantProps {
   restaurant: RestaurantType;
+  icon: ImageSourcePropType;
 }
-const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
+const Restaurant: React.FC<RestaurantProps> = ({ restaurant, icon }) => {
   return (
     <View style={styles.container}>
       <Image source={restaurant.logotipo} style={styles.logo} />
@@ -15,7 +15,7 @@ const Restaurant: React.FC<RestaurantProps> = ({ restaurant }) => {
         <Text style={styles.address}>{restaurant.endereco}</Text>
       </View>
       <TouchableOpacity>
-        <Image source={Icons.favoriteFull} style={styles.fav} />
+        <Image source={icon} style={styles.fav} />
       </TouchableOpacity>
     </View>
   );
