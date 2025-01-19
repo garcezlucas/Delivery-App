@@ -9,6 +9,10 @@ import more from "../assets/mais.png";
 import data from "../assets/meus-dados.png";
 import logout from "../assets/logout.png";
 import expand from "../assets/expandir.png";
+import HomeIcon from "../assets/aba-home.png";
+import FavIcon from "../assets/aba-favorito.png";
+import OrderIcon from "../assets/aba-pedidos.png";
+import profileIcon from "../assets/aba-perfil.png";
 
 export default {
   back,
@@ -21,5 +25,9 @@ export default {
   more,
   data,
   logout,
-  expand
+  expand,
+  HomeIcon,
+  FavIcon,
+  OrderIcon,
+  profileIcon,
 };

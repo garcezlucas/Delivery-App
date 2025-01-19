@@ -8,7 +8,7 @@ interface RestaurantComponentProps {
 }
 const RestaurantComponent: React.FC<RestaurantComponentProps> = ({ restaurant, icon }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} key={restaurant.id}>
       <Image source={restaurant.logotipo} style={styles.logo} />
       <View style={styles.texts}>
         <Text style={styles.name}>{restaurant.nome}</Text>
