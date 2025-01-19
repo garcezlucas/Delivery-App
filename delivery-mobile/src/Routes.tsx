@@ -6,6 +6,7 @@ import Address from "./screens/address/Address";
 import Register from "./screens/register/Register";
 import Home from "./screens/home/Home";
 import Favorites from "./screens/favorites/Favorites";
+import Orders from "./screens/orders/Orders";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,15 @@ export function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen
+          name="orders"
+          component={Orders}
+          options={{
+            title: "Meus pedidos",
+            headerTitleAlign: "center",
+            headerShadowVisible: false,
+          }}
+        />
         <Stack.Screen
           name="favorites"
           component={Favorites}
