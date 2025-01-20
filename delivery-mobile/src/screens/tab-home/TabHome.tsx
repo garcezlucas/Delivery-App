@@ -1,5 +1,7 @@
 import { Image, View, Text, ScrollView } from "react-native";
-import { styles } from "./Home.style";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
+import { RootStackParamList } from "../../RoutesAuth";
+import { styles } from "./TabHome.style";
 import Icons from "../../constants/Icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import TextBox from "../../components/textBox/TextBox";
@@ -10,10 +12,18 @@ import Banners from "../../components/banners/Banners";
 import { restaurantes } from "../../constants/mock";
 import RestaurantComponent from "../../components/restaurant/Restaurant";
 
-const Home = () => {
+export type HomeNavigationProp = NavigationProp<RootStackParamList, "home">;
+
+const TabHome = () => {
+  const navigation = useNavigation<HomeNavigationProp>();
+
   const [searchText, setSearchText] = useState<string>("");
 
   const handleSearchTextChange = (text: string) => setSearchText(text);
+
+  const openMenu = () => {
+    navigation.navigate("menu");
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -38,7 +48,11 @@ const Home = () => {
         <Text style={styles.highlights}>Destaques</Text>
         {restaurantes?.map((restaurant) => {
           return (
-            <RestaurantComponent restaurant={restaurant} icon={Icons.favoriteFull} />
+            <RestaurantComponent
+              restaurant={restaurant}
+              icon={Icons.favoriteFull}
+              onPress={openMenu}
+            />
           );
         })}
       </ScrollView>
@@ -46,4 +60,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default TabHome;
