@@ -1,8 +1,8 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { styles } from "./Profile.style";
+import { styles } from "./TabProfile.style";
 import Icons from "../../constants/Icons";
 
-const Profile = () => {
+const TabProfile = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={[styles.item, styles.borderTop]}>
@@ -55,4 +55,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default TabProfile;

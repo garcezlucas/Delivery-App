@@ -1,4 +1,5 @@
 import back from "../assets/back.png";
+import back2 from "../assets/back2.png";
 import remove from "../assets/delete.png";
 import logo from "../assets/logo.png";
 import cart from "../assets/cart.png";
@@ -13,9 +14,11 @@ import HomeIcon from "../assets/aba-home.png";
 import FavIcon from "../assets/aba-favorito.png";
 import OrderIcon from "../assets/aba-pedidos.png";
 import profileIcon from "../assets/aba-perfil.png";
+import location from "../assets/location.png";
 
 export default {
   back,
+  back2,
   remove,
   logo,
   cart,
@@ -30,4 +33,5 @@ export default {
   FavIcon,
   OrderIcon,
   profileIcon,
+  location
 };

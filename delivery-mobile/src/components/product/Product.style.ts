@@ -2,37 +2,35 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT_SIZE } from "../../constants/Theme";
 
 export const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
+  product: {
     width: "100%",
-    justifyContent: "space-between",
+    flexDirection: "row",
     alignItems: "center",
+    backgroundColor: COLORS.white,
     marginBottom: 10,
     marginTop: 10,
   },
-  restaurantTouch: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  logo: {
+  photo: {
     width: 80,
     height: 80,
-    borderRadius: 6
+    borderRadius: 6,
   },
   texts: {
+    flex: 1,
     padding: 8,
+    gap: 10,
   },
   name: {
-    fontSize: FONT_SIZE.md,
     color: COLORS.dark_gray,
-    marginBottom: 10
+    fontSize: FONT_SIZE.md,
   },
-  address: {
+  description: {
+    color: COLORS.medium_gray,
     fontSize: FONT_SIZE.sm,
-    color: COLORS.medium_gray
   },
-  fav: {
-    width: 30,
-    height: 30,
-  }
+
+  amount: {
+    color: COLORS.dark_gray,
+    fontSize: FONT_SIZE.md,
+  },
 });
