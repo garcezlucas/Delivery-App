@@ -5,6 +5,8 @@ import Icons from "./constants/Icons";
 import Principal from "./screens/principal/Principal";
 import Search from "./screens/search/Search";
 import Menu from "./screens/menu/Menu";
+import ProductDetails from "./screens/productDetails/ProductDetails";
+import OrderDetails from "./screens/orderDetails/OrderDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +17,7 @@ export type RootStackParamList = {
   profile: undefined;
   search: undefined;
   menu: undefined;
+  productDetails: undefined;
 };
 
 export function RoutesAuth() {
@@ -42,6 +45,20 @@ export function RoutesAuth() {
         <Stack.Screen
           name="menu"
           component={Menu}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="orderDetails"
+          component={OrderDetails}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="productDetails"
+          component={ProductDetails}
           options={{
             headerShown: false,
           }}

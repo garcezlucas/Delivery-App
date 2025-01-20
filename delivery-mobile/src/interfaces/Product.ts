@@ -4,6 +4,7 @@ export interface Product {
   idProduto: number;
   nome: string;
   descricao: string;
-  valor: number;
+  valor?: number;
+  vlTotal?: number;
   foto: ImageSourcePropType;
 }
