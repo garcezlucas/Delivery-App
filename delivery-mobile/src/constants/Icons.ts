@@ -15,6 +15,9 @@ import FavIcon from "../assets/aba-favorito.png";
 import OrderIcon from "../assets/aba-pedidos.png";
 import profileIcon from "../assets/aba-perfil.png";
 import location from "../assets/location.png";
+import product from "../assets/produto-pizza.png";
+import less from "../assets/menos.png";
+import plus from "../assets/mais.png";
 
 export default {
   back,
@@ -33,5 +36,8 @@ export default {
   FavIcon,
   OrderIcon,
   profileIcon,
-  location
+  location,
+  product,
+  less,
+  plus
 };

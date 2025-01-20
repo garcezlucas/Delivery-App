@@ -20,7 +20,7 @@ const ProductComponent: React.FC<ProductComponentProps> = ({ product }) => {
           {new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
-          }).format(product.valor)}
+          }).format(product.valor ?? product.vlTotal ?? 0)}
         </Text>
       </View>
     </TouchableOpacity>
