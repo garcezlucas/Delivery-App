@@ -1,14 +1,15 @@
-import { Image, View, Text } from "react-native";
+import { Image, View, Text, TouchableOpacity } from "react-native";
 import { Order } from "../../interfaces/Order";
 import { styles } from "./Order.style";
 
 interface OrderComponentProps {
   order: Order;
+  onPress: () => void;
 }
 
-const OrderComponent: React.FC<OrderComponentProps> = ({ order }) => {
+const OrderComponent: React.FC<OrderComponentProps> = ({ order, onPress }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={order.logotipo} style={styles.logo} />
       <View style={styles.texts}>
         <Text style={styles.name}>{order.nome}</Text>
@@ -23,7 +24,7 @@ const OrderComponent: React.FC<OrderComponentProps> = ({ order }) => {
         </View>
         <Text style={styles.status}>{order.status}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

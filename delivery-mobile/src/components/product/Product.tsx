@@ -1,19 +1,26 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { Product } from "../../interfaces/Product";
 import { styles } from "./Product.style";
+import Icons from "../../constants/Icons";
 
 interface ProductComponentProps {
   product: Product;
+  onClickDelete?: () => void;
 }
-const ProductComponent: React.FC<ProductComponentProps> = ({ product }) => {
+const ProductComponent: React.FC<ProductComponentProps> = ({
+  product,
+  onClickDelete,
+}) => {
   return (
-    <TouchableOpacity key={product.idProduto} style={styles.product}>
-      <Image source={product.foto} style={styles.photo} />
+    <View style={styles.container}>
+      <TouchableOpacity key={product.idProduto} style={styles.product}>
+        <Image source={product.foto} style={styles.photo} />
 
-      <View style={styles.texts}>
-        <Text style={styles.name}>{product.nome}</Text>
-        <Text style={styles.description}>{product.descricao}</Text>
-      </View>
+        <View style={styles.texts}>
+          <Text style={styles.name}>{product.nome}</Text>
+          <Text style={styles.description}>{product.descricao}</Text>
+        </View>
+      </TouchableOpacity>
 
       <View>
         <Text style={styles.amount}>
@@ -22,8 +29,17 @@ const ProductComponent: React.FC<ProductComponentProps> = ({ product }) => {
             currency: "BRL",
           }).format(product.valor ?? product.vlTotal ?? 0)}
         </Text>
+
+        {onClickDelete && (
+          <TouchableOpacity
+            style={styles.containerRemove}
+            onPress={onClickDelete}
+          >
+            <Image source={Icons.remove} style={styles.remove} />
+          </TouchableOpacity>
+        )}
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 

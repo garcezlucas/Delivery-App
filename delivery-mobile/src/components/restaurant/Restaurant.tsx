@@ -11,16 +11,16 @@ import { styles } from "./Restaurant.style";
 interface RestaurantComponentProps {
   restaurant: Restaurant;
   icon: ImageSourcePropType;
-  onPress: () => void;
+  openMenu: () => void;
 }
 const RestaurantComponent: React.FC<RestaurantComponentProps> = ({
   restaurant,
   icon,
-  onPress,
+  openMenu,
 }) => {
   return (
     <View style={styles.container} key={restaurant.id}>
-      <TouchableOpacity style={styles.restaurantTouch} onPress={onPress}>
+      <TouchableOpacity style={styles.restaurantTouch} onPress={openMenu}>
         <Image source={restaurant.logotipo} style={styles.logo} />
         <View style={styles.texts}>
           <Text style={styles.name}>{restaurant.nome}</Text>

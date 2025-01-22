@@ -7,6 +7,9 @@ import Search from "./screens/search/Search";
 import Menu from "./screens/menu/Menu";
 import ProductDetails from "./screens/productDetails/ProductDetails";
 import OrderDetails from "./screens/orderDetails/OrderDetails";
+import Checkout from "./screens/checkout/Checkout";
+import { TouchableOpacity, Text } from "react-native";
+import { COLORS, FONT_SIZE } from "./constants/Theme";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,9 +21,15 @@ export type RootStackParamList = {
   search: undefined;
   menu: undefined;
   productDetails: undefined;
+  orderDetails: undefined;
+  checkout: undefined;
 };
 
 export function RoutesAuth() {
+  const clearCheckout = () => {
+    alert("OK");
+  };
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -53,7 +62,10 @@ export function RoutesAuth() {
           name="orderDetails"
           component={OrderDetails}
           options={{
-            headerShown: false,
+            headerShadowVisible: false,
+            title: "Detalhes do pedido",
+            headerTitleAlign: "center",
+            headerBackTitle: "Voltar",
           }}
         />
         <Stack.Screen
@@ -61,6 +73,25 @@ export function RoutesAuth() {
           component={ProductDetails}
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="checkout"
+          component={Checkout}
+          options={{
+            headerShadowVisible: false,
+            title: "Meu pedido",
+            headerTitleAlign: "center",
+            headerBackTitle: "Voltar",
+            headerRight: () => {
+              return (
+                <TouchableOpacity onPress={clearCheckout}>
+                  <Text style={{ color: COLORS.red, fontSize: FONT_SIZE.md }}>
+                    Limpar
+                  </Text>
+                </TouchableOpacity>
+              );
+            },
           }}
         />
       </Stack.Navigator>

@@ -25,4 +25,7 @@ export const styles = StyleSheet.create({
     fontSize: FONT_SIZE.sm,
     color: COLORS.dark_gray,
   },
+  footer: {
+    marginTop: 10,
+  }
 });

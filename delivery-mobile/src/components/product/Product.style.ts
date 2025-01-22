@@ -2,13 +2,18 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT_SIZE } from "../../constants/Theme";
 
 export const styles = StyleSheet.create({
-  product: {
+  container: {
     width: "100%",
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: COLORS.white,
     marginBottom: 10,
     marginTop: 10,
+  },
+  product: {
+    width: "85%",
+    flexDirection: "row",
+    alignItems: "center",
   },
   photo: {
     width: 80,
@@ -32,5 +37,13 @@ export const styles = StyleSheet.create({
   amount: {
     color: COLORS.dark_gray,
     fontSize: FONT_SIZE.md,
+  },
+  containerRemove: {
+    alignItems: "flex-end",
+    marginTop: 8,
+  },
+  remove: {
+    width: 28,
+    height: 28,
   },
 });
