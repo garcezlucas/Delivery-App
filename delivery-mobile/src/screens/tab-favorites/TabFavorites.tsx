@@ -29,7 +29,7 @@ const TabFavorites = () => {
             <RestaurantComponent
               restaurant={item}
               icon={Icons.remove}
-              onPress={openMenu}
+              openMenu={openMenu}
             />
           );
         }}

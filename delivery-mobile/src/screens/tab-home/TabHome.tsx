@@ -1,4 +1,4 @@
-import { Image, View, Text, ScrollView } from "react-native";
+import { Image, View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { RootStackParamList } from "../../RoutesAuth";
 import { styles } from "./TabHome.style";
@@ -25,11 +25,17 @@ const TabHome = () => {
     navigation.navigate("menu");
   };
 
+  const openCart = () => {
+    navigation.navigate("checkout");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Image source={Icons.logo} style={styles.logo} />
-        <Image source={Icons.cart} style={styles.cart} />
+        <TouchableOpacity onPress={openCart}>
+          <Image source={Icons.cart} style={styles.cart} />
+        </TouchableOpacity>
       </View>
 
       <View style={styles.search}>
@@ -51,7 +57,7 @@ const TabHome = () => {
             <RestaurantComponent
               restaurant={restaurant}
               icon={Icons.favoriteFull}
-              onPress={openMenu}
+              openMenu={openMenu}
             />
           );
         })}

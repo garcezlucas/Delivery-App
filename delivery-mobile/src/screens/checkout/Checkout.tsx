@@ -1,10 +1,16 @@
 import { FlatList, Text, View } from "react-native";
-import { styles } from "./OrderDetails.style";
+import { styles } from "./Checkout.style";
 import { pedido } from "../../constants/mock";
 import ProductComponent from "../../components/product/Product";
+import Button from "../../components/button/Button";
 
-const OrderDetails = () => {
+const Checkout = () => {
   const order = pedido;
+
+  const onClickDelete = () => {};
+
+  const onClickFinish = () => {};
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -12,7 +18,9 @@ const OrderDetails = () => {
         keyExtractor={(order) => order.idItem?.toString()}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => {
-          return <ProductComponent product={item} />;
+          return (
+            <ProductComponent product={item} onClickDelete={onClickDelete} />
+          );
         }}
       />
 
@@ -51,8 +59,12 @@ const OrderDetails = () => {
           </Text>
         </View>
       </View>
+
+      <View style={styles.footer}>
+        <Button title="Finalizar pedido" onPress={onClickFinish} />
+      </View>
     </View>
   );
 };
 
-export default OrderDetails;
+export default Checkout;
